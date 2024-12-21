@@ -1,0 +1,253 @@
+:root {
+    --primary-color: #3A506B;
+    --dark-accent: #2E3541;
+    --light-highlight: #B2C9EB; 
+    --vibrant-accent: #97C1FF;
+    --text-color: #A5AEBD;
+    --white-color: #FFFFFF;
+    --padding-large: 30px;
+    --padding-medium: 15px;
+    --padding-small: 8px;
+    --padding-text: 15px;
+}
+html{
+    font-size: 16px;
+    transition: font-size 0.3s ease-in-out;
+}
+header, footer{
+    background-color: var(--dark-accent);
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+p, h2, h3, h1{
+    padding: var(--padding-text);
+}
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-left: var(--padding-large);
+    padding-right: var(--padding-large);
+}
+img{
+    width: 200px; 
+    height: 280px; 
+    object-fit: cover;
+}
+#grid-pagina{
+    display: grid;
+    grid-template-areas: "zona1 zona1 zona1"
+                        "zona2 zona2 zona8"
+                        "zona5 zona6 zona8"
+                        "zona4 zona3 zona7"
+      ;
+    grid-template-columns: 1fr 1fr 4fr;
+    grid-gap: 15px;
+}
+
+#prima-impresie{
+    grid-area: zona1;
+    display: grid;
+    grid-template-areas:"prezentare prezentare"
+                        "trailere trailere"
+                        "trailer1 trailer2";
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#grid-pagina > *{
+    outline: 1px solid black;
+}
+#trailere{
+    grid-area: trailere;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.trailer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+#prezentare{
+    grid-area: prezentare;
+}
+#trailer1{
+    grid-area: trailer1;
+}
+#trailer2{
+    grid-area: trailer2;
+}
+#tabel{
+    grid-area: zona2;
+}
+#calendar{
+    grid-area: zona3;
+}
+#anunturi{
+    grid-area: zona4;
+}
+#utilizatori{
+    grid-area: zona5;
+}
+#statistici{
+    grid-area: zona6;
+}
+#infosite{
+    grid-area: zona7;
+}
+#produse{
+    grid-area: zona8;
+    display: grid;
+    grid-template-areas: "reduceri"
+                            "jocurinoi"
+                            "populare";
+    
+}
+#reduceri{
+    grid-area: reduceri;
+    display: grid;
+    grid-template-areas:"header-reduceri header-reduceri header-reduceri"
+                        "reduceri1 reduceri2 reduceri3"
+                        "catalog-reduceri catalog-reduceri catalog-reduceri";
+}
+#header-reduceri{
+    grid-area: header-reduceri;
+}
+#catalog-reduceri{
+    grid-area: catalog-reduceri;
+}
+#reduceri1{
+    grid-area: reduceri1;
+}
+#reduceri2{
+    grid-area: reduceri2;
+}
+#reduceri3{
+    grid-area: reduceri3;
+}
+#jocurinoi{
+    grid-area:jocurinoi;
+}
+#populare{
+    grid-area:populare;
+}
+#jocurinoi {
+    display: grid;
+    grid-template-areas: 
+        "header-jocurinoi header-jocurinoi header-jocurinoi"
+        "noi1 noi2 noi3";
+    gap: 15px;
+}
+
+#header-jocurinoi {
+    grid-area: header-jocurinoi;
+}
+
+#noi1 {
+    grid-area: noi1;
+}
+
+#noi2 {
+    grid-area: noi2;
+}
+
+#noi3 {
+    grid-area: noi3;
+}
+#populare {
+    display: grid;
+    grid-template-areas: 
+        "header-populare header-populare header-populare"
+        "populare1 populare2 populare3";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+#header-populare {
+    grid-area: header-populare;
+}
+
+#populare1 {
+    grid-area: populare1;
+}
+
+#populare2 {
+    grid-area: populare2;
+}
+
+#populare3 {
+    grid-area: populare3;
+}
+
+@media (max-width: 992px) {
+    html{
+        font-size: 15px;
+    }
+    body{
+        padding-left: var(--padding-medium);
+        padding-right: var(--padding-medium);
+    }
+    #grid-pagina {
+        grid-template-areas: 
+            "zona1 zona1"
+            "zona2 zona8"
+            "zona5 zona6"
+            "zona4 zona3"
+            "zona7 zona7";
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 12px;
+    }
+
+    #produse {
+        grid-template-areas: 
+            "reduceri"
+            "jocurinoi"
+            "populare";
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+    body{
+        padding-left: var(--padding-small);
+        padding-right: var(--padding-small);
+    }
+    #grid-pagina {
+        grid-template-areas: 
+            "zona1"
+            "zona2"
+            "zona5"
+            "zona4"
+            "zona3"
+            "zona6"
+            "zona7"
+            "zona8";
+        grid-template-columns: 1fr;
+        grid-gap: 8px;
+    }
+
+    #produse {
+        grid-template-areas: 
+            "reduceri"
+            "jocurinoi"
+            "populare";
+        grid-template-columns: 1fr;
+    }
+
+    #prima-impresie {
+        grid-template-areas: 
+            "prezentare"
+            "trailere"
+            "trailer1"
+            "trailer2";
+    }
+}
