@@ -52,25 +52,58 @@
             </div>
             <div id="trailere">
                 <h2>Selecția de trailere saptamanală</h2>
-                <div class="trailer-container">
-                    <iframe id="main-trailer" width="560" height="315"
-                     src="https://www.youtube.com/embed/QdBZY2fkU-0" 
-                     title="Grand Theft Auto VI Trailer 1" 
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                    <div id="trailer-buttons">
-                        <a href="https://www.youtube.com/embed/QdBZY2fkU-0" onclick="changeTrailer(event)" class="trailer-link">GTA VI</a>
-                        <a href="https://www.youtube.com/embed/OiczN-8QKDA" onclick="changeTrailer(event)" class="trailer-link">Factorio Space Age</a>
-                    </div>
-                </div>
+                <div class="container-iframe">
+                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/QdBZY2fkU-0" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="taburi-iframe">
+                    <a href="https://www.youtube.com/embed/QdBZY2fkU-0" target="ifr-video">GTA VI</a>
+                    <a href="https://www.youtube.com/embed/OiczN-8QKDA" target="ifr-video" >Factorio Space Age</a><br/>
+                    </div>         
+                </div>                
             </div>
         </section>
 
         <!-- Zona 2 - Tabel-->
-        <section id="tabel">
-            <h1>Zona 2</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, ad soluta molestias quibusdam facere cum provident iure totam ducimus? Veritatis commodi dolorum iure vel totam doloremque unde quibusdam repellendus voluptatem!</p>
+        <section id="tabel" class="section-table" >
+            <table>
+                <caption>Servicii oferite de Echipa GameZone</caption>
+                <thead>
+                    <tr>
+                        <th>Serviciu</th>
+                        <th>Detalii</th>
+                        <th>Disponibilitate</th>
+                        <th>Preț</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Garantie extinsa</td>
+                        <td>30 de zile pentru retur si suport 24/24</td>
+                        <td>Toate Produsele</td>
+                        <td>Gratuit</td>
+                    </tr>
+                    <tr>
+                        <td>60 zile pentru clientii premium</td>
+                        <td>Toate Produsele</td>
+                        <td>15 Lei/luna</td>
+                    </tr>
+                    <tr>
+                        <td>Livrare imediata</td>
+                        <td>Codurile sunt trimise imediat dupa achizitie</td>
+                        <td>Produsele digitale</td>
+                        <td>Gratuit</td>
+                    </tr>
+                    <tr>
+                        <td>Gamezone Premium</td>
+                        <td>Acces la continut exclusiv si reduceri extra</td>
+                        <td>Pe teritoriul Romaniei</td>
+                        <td>15 Lei/luna</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td colspan="4">Pentru detalii, vizitati pagina "Servicii"!</td>
+                </tfoot>
+            </table>
         </section>
 
         <!-- Zona 3 - Calendar-->
@@ -362,8 +395,7 @@
             Tel: 0002910982174 <br>
             Email: <a href="mailto:radu-gilbert.leoveanu@s.unibuc.ro">radu-gilbert.leoveanu@s.unibuc.ro</a>
         </address>
-        <a href="#">Back up</a> <br>
-
+        <a href="#" id="link-top" title="Mergi la inceputul paginii"><div id="triunghi"></div></a>
         <small>
             &copy; <time datetime="2024-10-22">2024</time> Toate drepturile rezervate.
         </small>

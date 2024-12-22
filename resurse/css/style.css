@@ -37,6 +37,72 @@ img{
     height: 280px; 
     object-fit: cover;
 }
+
+/*Table modifications*/
+.section-table {
+    overflow-x: scroll;
+    border-radius: 10px;
+    border: 5px solid var(--light-highlight);
+    width: 100%; /* Se adaptează complet zonei */
+    box-sizing: border-box; /* Include marginile și paddingul */
+    margin: 0 auto; /* Centrare pe orizontală */
+    padding: 10px;
+}
+table {
+    border-collapse: collapse;
+    text-align: left;
+    background-color: var(--light-highlight);
+    color: black;
+    width: 100%;
+    min-width: 700px;
+    max-width: none;
+}
+
+caption{
+    caption-side: bottom;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+thead th{
+    background-color: var(--dark-accent);
+    color: var(--white-color);
+}
+
+tbody td:nth-child(even){
+    background-color: var(--vibrant-accent);
+}
+
+tbody td:nth-child(odd){
+    background-color: var(--light-highlight);
+}
+
+/*Change all cells from a row when a cell is hovered*/
+tbody tr:hover td{
+    background-color: white ;
+    transition: background-color 0.2s ease-in-out;
+}
+/*Change that cell specifically to a different color than the rest */
+tbody td:hover {
+    background-color: var(--dark-accent) !important; /* Culoare pentru celula curentă */
+    color:white;
+    transition: background-color 0.2s ease-in-out;
+}
+tfoot td {
+    background-color: var(--dark-accent);
+    color: var(--white-color);
+    padding: 10px;
+    text-align: center;
+}
+tfoot td:hover {
+    background-color: var(--vibrant-accent);
+    color: var(--dark-accent);
+    transition: background-color 0.2s ease-in-out;
+}
+/*Table modifications*/
+
+
 #grid-pagina{
     display: grid;
     grid-template-areas: "zona1 zona1 zona1"
@@ -45,21 +111,23 @@ img{
                         "zona4 zona3 zona7"
       ;
     grid-template-columns: 1fr 1fr 4fr;
+    grid-template-rows: auto auto 1fr auto;
     grid-gap: 15px;
 }
-
+#grid-pagina > *{
+    border: 1px solid black;
+}
+/*iframe customization*/
 #prima-impresie{
     grid-area: zona1;
     display: grid;
-    grid-template-areas:"prezentare prezentare"
-                        "trailere trailere"
-                        "trailer1 trailer2";
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"prezentare"
+                        "trailere";
     gap: 10px;
 }
-
-#grid-pagina > *{
-    outline: 1px solid black;
+#prezentare{
+    grid-area: prezentare;
+    text-align: center;
 }
 #trailere{
     grid-area: trailere;
@@ -68,15 +136,83 @@ img{
     align-items: center;
     gap: 15px;
 }
+.taburi-iframe{
+    display:flex;
+    margin-bottom: 10px;
+}
+.taburi-iframe a{
+    background-color: var(--dark-accent);
+    color: var(--white-color);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    border: 3px solid var(--vibrant-accent);
+    border-radius: 0 0 15px 15px;
+    transition: background-color 0.3s ease-in-out;
+    padding: 8px 12px;
+    border-top: none;
+    width:150px;
+    height: 20px;
+}
+.taburi-iframe a:hover {
+    background-color: var(--vibrant-accent);
+    color: var(--dark-accent);
+}
+.container-iframe{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+iframe {
+    width: 560px;
+    height: 315px;
+    border: 3px solid var(--vibrant-accent);
+    border-radius: 5px 5px 0 0;
+    background-color: var(--white-color); 
+}
 .trailer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
-#prezentare{
-    grid-area: prezentare;
+/*iframe customization*/
+
+/*Back to top button*/
+#link-top{
+  position:fixed;
+  bottom:0.3em;
+  opacity:0.5;
+  left:0.3em;
+  width:3rem;
+  box-sizing: border-box;
+  height:3rem;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  line-height:3rem;
+  text-align:center;
+  border:2px solid var(--dark-accent);
+  background: var(--light-highlight);
+  transform: rotate(45deg);
 }
+#link-top:hover{
+  opacity:1;
+}
+#triunghi{
+  height:0px;
+  width:0;
+  display:inline-block;
+  border-bottom:2rem solid var(--dark-accent);
+  border-radius: 50%;
+  border-left:1rem solid transparent;
+  border-right:1rem solid transparent;
+  vertical-align: top;
+  transform: translateX(-5%) translateY(15%) rotate(-45deg);
+  
+  
+}
+/*Back to top button*/
 #trailer1{
     grid-area: trailer1;
 }
@@ -85,6 +221,8 @@ img{
 }
 #tabel{
     grid-area: zona2;
+    display: block;
+    height: auto;
 }
 #calendar{
     grid-area: zona3;
@@ -187,6 +325,16 @@ img{
 }
 
 @media (max-width: 992px) {
+    
+    /*Scroll bar*/
+    .section-table {
+        overflow-x: scroll;
+    }
+
+    table {
+        min-width: 700px;
+    }
+    /*Scroll bar*/
     html{
         font-size: 15px;
     }
@@ -197,12 +345,14 @@ img{
     #grid-pagina {
         grid-template-areas: 
             "zona1 zona1"
-            "zona2 zona8"
+            "zona2 zona2"
+            "zona8 zona8"
             "zona5 zona6"
             "zona4 zona3"
             "zona7 zona7";
         grid-template-columns: 1fr 2fr;
         grid-gap: 12px;
+
     }
 
     #produse {
@@ -211,10 +361,20 @@ img{
             "jocurinoi"
             "populare";
         grid-template-columns: 1fr;
+        overflow-x: scroll;
     }
 }
 
 @media (max-width: 768px) {
+     /*Scroll bar*/
+     .section-table {
+        overflow-x: scroll;
+    }
+
+    table {
+        min-width: 700px;
+    }
+    /*Scroll bar*/
     html{
         font-size: 14px;
     }
@@ -242,6 +402,7 @@ img{
             "jocurinoi"
             "populare";
         grid-template-columns: 1fr;
+        overflow-x: scroll;
     }
 
     #prima-impresie {
