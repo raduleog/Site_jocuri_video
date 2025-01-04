@@ -23,24 +23,7 @@ nav ul li a:hover {
   color: var(--dark-accent);
   box-shadow: inset 0px 0px 20px var(--dark-accent);
 }
-nav ul li.dropdown {
-  /*
-  a {
-      color: var(--text-color);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      text-align: center;
-      transition: color 0.8s ease, background-color 0.8s ease;
 
-      &:hover {
-          background-color: var(--vibrant-accent);
-          color: var(--dark-accent);
-      }
-  }
-  */
-}
 nav ul li.dropdown .dropdown-menu {
   display: none;
   position: absolute;
