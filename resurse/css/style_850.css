@@ -1,0 +1,40 @@
+@media (max-width: 850px) {
+    
+    /*Scroll bar*/
+    .section-table {
+        overflow-x: scroll;
+    }
+
+    table {
+        min-width: 700px;
+    }
+    /*Scroll bar*/
+    html{
+        font-size: 15px;
+    }
+    body{
+        padding-left: var(--padding-medium);
+        padding-right: var(--padding-medium);
+    }
+    #grid-pagina {
+        grid-template-areas: 
+            "zona1 zona1"
+            "zona2 zona2"
+            "zona8 zona8"
+            "zona5 zona6"
+            "zona4 zona3"
+            "zona7 zona7";
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 12px;
+
+    }
+
+    #produse {
+        grid-template-areas: 
+            "reduceri"
+            "jocurinoi"
+            "populare";
+        grid-template-columns: 1fr;
+        overflow-x: scroll;
+    }
+}

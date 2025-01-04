@@ -1,0 +1,54 @@
+//meniu
+nav {
+    //Meniul Principal
+    ul {
+        display: flex;
+        list-style: none;
+        align-items: right;
+        background-color: var(--dark-accent);
+        padding: 0;
+        margin: 0;
+
+        //Fiecare element din meniu
+        li{
+            position: relative;
+            
+            a {
+                color: var(--text-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                text-align: center;
+                transition: color 0.8s ease, background-color 0.8s ease;
+                &:hover{
+                    background-color: var(--vibrant-accent);
+                    color: var(--dark-accent);
+                    box-shadow: inset 0px 0px 20px var(--dark-accent);
+                }
+            }
+            
+            //Dropdownul
+            &.dropdown{
+                .dropdown-menu{
+                    display: none; // Initial ascuns, apare doar la hover
+                    position: absolute;
+                    top: 100%; //Imediat sub Oferte
+                    background-color: var(--dark-accent);
+                    //padding: 0.5rem 0;
+                }
+            }
+                
+             //Hover dropdown menu    
+            &:hover {
+                .dropdown-menu{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+
+
+        }
+    }
+}

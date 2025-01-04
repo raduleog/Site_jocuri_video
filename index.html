@@ -13,8 +13,13 @@
     <link rel="shortcut icon" href="./resurse/ico/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="./resurse/ico/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="GameZone" />
+    
+    
     <link rel="manifest" href="./resurse/ico/site.webmanifest" />
     <link rel="stylesheet" href="./resurse/css/style.css">
+    <link rel="stylesheet" href="./resurse/css/style_400.css">
+    <link rel="stylesheet" href="./resurse/css/style_850.css">
+    <link rel="stylesheet" href="./resurse/css/menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -28,12 +33,14 @@
         <h1>GamingZone: Porția ta de jocuri video!</h1>
         <nav>
             <ul>
-                <li><a href="#home"><span class="fas fa-home"></span> Acasă</a>
-                    <ul>
-                        <li><a href="#reduceri">Reduceri</a></li>
-                        <li><a href="#jocurinoi">Jocuri Noi</a></li>
-                        <li><a href="#populare">Jocuri Populare</a></li>
-                    </ul>
+                <li><a href="#home"><span class="fas fa-home"></span> Acasă</a></li>
+                <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Ofertele Noastre</a>
+                        <div class="dropdown-menu">
+                            <a href="#reduceri">Reduceri</a>
+                            <a href="#jocurinoi">Jocuri Noi</a>
+                            <a href="#populare">Jocuri Populare</a>
+                        </div>
                 </li>
                 <li><a href="#">Catalog</a></li>
                 <li><a href="#"><span class="fas fa-shopping-cart fa-bounce"></span> Coș de cumpărături</a></li>
