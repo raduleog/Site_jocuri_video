@@ -1,54 +1,168 @@
-//meniu
-nav {
-    //Meniul Principal
-    ul {
+nav{
+    //definesc o latime si o inaltime prestabilita pentru butoanele din meniu
+    $latime-buton: 170px;
+    $inaltime-buton: 55px;
+    background-color: var(--dark-accent);
+
+    //initial iconita hamburger si checkboxul sunt ascunse
+    #hamburger, #ch-menu {
+        display: none;
+    }
+
+    ul.meniu{
+        //meniul principal
         display: flex;
-        list-style: none;
-        align-items: right;
-        background-color: var(--dark-accent);
+        list-style-type: none;
         padding: 0;
         margin: 0;
+        
+        //pentru stilizare, daca butonul contine o iconita, le afisez cu flexbox, altfel iconita va aparea deasupra textului
+        .contains-icon {
+            display:flex;
+            justify-content: center;
 
-        //Fiecare element din meniu
-        li{
-            position: relative;
-            
-            a {
-                color: var(--text-color);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 1rem;
-                text-align: center;
-                transition: color 0.8s ease, background-color 0.8s ease;
-                &:hover{
-                    background-color: var(--vibrant-accent);
-                    color: var(--dark-accent);
-                    box-shadow: inset 0px 0px 20px var(--dark-accent);
-                }
+            //distanta dintre text si icon
+            .text-icon {
+                margin-left: 8px;
             }
-            
-            //Dropdownul
-            &.dropdown{
-                .dropdown-menu{
-                    display: none; // Initial ascuns, apare doar la hover
-                    position: absolute;
-                    top: 100%; //Imediat sub Oferte
-                    background-color: var(--dark-accent);
-                    //padding: 0.5rem 0;
-                }
-            }
-                
-             //Hover dropdown menu    
-            &:hover {
-                .dropdown-menu{
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-
-
-
         }
+
+        //stilizare text.
+        div, a{
+            text-decoration: none;
+            color: var(--text-color);
+            display: block;
+            cursor: pointer;
+            transition: all 0.3s linear;
+        }
+
+        //stilizare lista si aplicarea animatiei din curs. animatia este definita mai jos.
+        ul {
+            display: none;
+            position: relative;
+            padding: 0;
+            list-style-type: none;
+            animation-name: afis_submeniu;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            transform-origin: 50% 0;
+        }
+
+        //butoanele din meniu
+        li {
+            width: $latime-buton;
+            height: $inaltime-buton;
+            line-height: $inaltime-buton;
+            font-weight: bold;
+            transition: all 0.3s linear;
+            text-align: center; 
+            vertical-align: middle; 
+            &:hover {
+                //la hover pe buton schimb culoarea si aplic o umbra
+                background-color: var(--vibrant-accent);
+                box-shadow: inset 0px 0px 20px var(--dark-accent);
+                
+                //schimb si culoarea textului
+                div, a{
+                    color: var(--dark-accent);
+                }
+
+                //submeniul - daca exista, il afisez cu display: block
+                ul {
+                    display: block;
+                    background-color: var(--dark-accent);
+                    color: var(--text-color);
+                    z-index: 10; // ma asigur ca este afisat peste orice alt element
+
+                    //aplic aceleasi transformari ca si mai sus.
+                    .contains-icon {
+                        display:flex;
+                        justify-content: center;
+                        z-index: 1;
+                        .text-icon {
+                            margin-left: 8px;
+                        }
+
+                        // inainte de hover, sageata este translatata in afara butonului, si este invizibila.
+                        .fa-arrow-right {
+                            margin-left: 10px;
+                            transform: translateX(-400%);
+                            transition: transform 0.3s ease-in-out;
+                            opacity: 0;
+                        }
+
+                        //la hover, o translatez in pozitia initiala, inainte de text si o fac vizibila
+                        &:hover {
+                            .fa-arrow-right {
+                                transform: translateX(0);
+                                opacity: 1; 
+                            }
+                        }
+                    }
+                    
+                    //textul arata la fel ca in butonul de mai sus.
+                    div, a{
+                        text-decoration: none;
+                        color: var(--text-color);
+                        display: block;
+                        cursor: pointer;
+                        transition: all 0.3s linear;
+                    }
+                }
+            }
+        }
+
+
+        
+
+        
+    }
+}
+
+
+//pentru ecrane medii
+@media screen and (max-width: 1000px) {
+    nav{
+        ul.meniu {
+            div.imag-icon{
+                display: block; // afisez doar iconul.
+            }
+            div.text-icon{
+                display: none; // ascund textul
+            }
+        }
+    }
+}
+
+//pentru ecrane mici
+@media screen and (max-width: 700px) {
+    #hamburger{
+        display: block !important; //afisez hamburgerul
+    } 
+
+    //ascund meniul
+    nav ul.meniu{
+        display:none;
+        width: 100%;
+        background-color: var(--dark-accent);
+    }
+
+    //afisez meniul doar cand checkboxul ascuns este apasat.
+    #ch-menu:checked + ul.meniu{
+        display: block;
+    }
+}
+
+
+@keyframes afis_submeniu {
+    0%{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scaleY(1);
+        opacity: 1;
     }
 }
