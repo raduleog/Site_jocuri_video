@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../fragmente/head.ejs") %>
+
+    <meta name="keywords" content="jocuri video, achizitii jocuri, jocuri online, gaming, console, PC, fun">
+    <meta name="description" content="Descoperă cele mai noi jocuri video pe site-ul nostru. Oferim o gamă variată de jocuri pentru toate consolele și PC-uri.">
+    
+    <title>GameZone: Îmbogățește-ți Colecția de Jocuri</title>
+</head>
+<body>
+    <header>
+        <h1>GamingZone: Porția ta de jocuri video!</h1>
+        <%- include("../fragmente/meniu.ejs") %>
+    </header>
+
+    <main id="grid-pagina">
+        <!-- Zona 1 - Prezentare si Jocuri Saptamanale-->
+        <section id="prima-impresie">
+            <div id="prezentare">
+                <h1>Zona 1</h1>
+                <h2>PREZENTARE TBA</h2>
+
+                <p><%- locals.ip%></p>
+                <p><%- %></p> 
+
+            </div>
+            <div id="trailere">
+                <h2>Selecția de trailere saptamanală</h2>
+                <div class="container-iframe">
+                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/QdBZY2fkU-0" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="taburi-iframe">
+                    <a href="https://www.youtube.com/embed/QdBZY2fkU-0" target="ifr-video">GTA VI</a>
+                    <a href="https://www.youtube.com/embed/OiczN-8QKDA" target="ifr-video" >Factorio Space Age</a><br/>
+                    </div>         
+                </div>                
+            </div>
+        </section>
+
+        <!-- Zona 2 - Tabel-->
+        <section id="tabel" class="section-table" >
+            <table>
+                <caption>Servicii oferite de Echipa GameZone</caption>
+                <thead>
+                    <tr>
+                        <th>Serviciu</th>
+                        <th>Detalii</th>
+                        <th>Disponibilitate</th>
+                        <th>Preț</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Garantie extinsa</td>
+                        <td>30 de zile pentru retur si suport 24/24</td>
+                        <td>Toate Produsele</td>
+                        <td>Gratuit</td>
+                    </tr>
+                    <tr>
+                        <td>60 zile pentru clientii premium</td>
+                        <td>Toate Produsele</td>
+                        <td>15 Lei/luna</td>
+                    </tr>
+                    <tr>
+                        <td>Livrare imediata</td>
+                        <td>Codurile sunt trimise imediat dupa achizitie</td>
+                        <td>Produsele digitale</td>
+                        <td>Gratuit</td>
+                    </tr>
+                    <tr>
+                        <td>Gamezone Premium</td>
+                        <td>Acces la continut exclusiv si reduceri extra</td>
+                        <td>Pe teritoriul Romaniei</td>
+                        <td>15 Lei/luna</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td colspan="4">Pentru detalii, vizitati pagina "Servicii"!</td>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Zona 3 - Calendar-->
+        <section id="calendar">
+            <h1>Zona 3</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, ad soluta molestias quibusdam facere cum provident iure totam ducimus? Veritatis commodi dolorum iure vel totam doloremque unde quibusdam repellendus voluptatem!</p>
+        </section>
+
+        <!-- Zona 4 - Anunturi-->
+        <section id="anunturi">
+            <h1>Zona 4</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, ad soluta molestias quibusdam facere cum provident iure totam ducimus? Veritatis commodi dolorum iure vel totam doloremque unde quibusdam repellendus voluptatem!</p>
+
+        </section>
+        <!-- Zona 5 - Utilizatori Online-->
+        <section id="utilizatori">
+            <h1>Zona 5</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, ad soluta molestias quibusdam facere cum provident iure totam ducimus? Veritatis commodi dolorum iure vel totam doloremque unde quibusdam repellendus voluptatem!</p>
+
+        </section>
+        <!-- Zona 6 - Statistici despre site sau utilizatori-->
+        <section id="statistici">
+            <h1>Zona 6</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, ad soluta molestias quibusdam facere cum provident iure totam ducimus? Veritatis commodi dolorum iure vel totam doloremque unde quibusdam repellendus voluptatem!</p>
+
+        </section>
+        <!-- Zona 7 - Informatii despre site-->
+        <section id="infosite">
+            <h1>Zona 7</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, ad soluta molestias quibusdam facere cum provident iure totam ducimus? Veritatis commodi dolorum iure vel totam doloremque unde quibusdam repellendus voluptatem!</p>
+
+        </section>
+        <!-- Zona 8 - Reduceri, Jocuri Noi, Jocuri populare-->
+        <section id="produse">
+            <h1>Zona 8</h1>
+            <div id="reduceri">
+                <h2 id="header-readuceri">Reduceri</h2>
+                <article id="reduceri1">
+                    <h3>The Witcher 3: Wild Hunt (2015)</h3>
+                    <figure>
+                        <picture>
+                            <source srcset="./resurse/images/witcher3cover-lowres.jpg" media="(max-width: 300px)">
+                            <source srcset="./resurse/images/witcher3cover-medres.jpg" media="(max-width: 600px)">
+                            <img src="./resurse/images/witcher3cover-highres.jpg" alt="TheWitcher3">
+                        </picture>
+                        <figcaption>
+                            O epopee <abbr title="Role Playing Game">RPG</abbr> în care jucătorii preiau rolul lui Geralt of Rivia, un vânător de monștri, într-o lume deschisă vastă și captivantă, plină de decizii morale și lupte intense.
+                        </figcaption>
+                    </figure>
+                    <div class="preț-joc">
+                        <p>Preț: <s>$59.99</s> <ins>$19.99</ins></p>
+                    </div>
+                </article>
+                <article id="reduceri2">
+                    <h3>Horizon Zero Dawn (2017)</h3>
+                    <figure>
+                        <picture>
+                            <source srcset="./resurse/images/horizoncover-lowres.jpg" media="(max-width: 300px)">
+                            <source srcset="./resurse/images/horizoncover-medres.jpg" media="(max-width: 600px)">
+                            <img src="./resurse/images/horizoncover-highres.jpg" alt="HorizonZeroDawn">
+                        </picture>
+                        <figcaption>
+                            Un joc de acțiune și aventură setat într-o lume <b>post-apocaliptică</b>, unde jucătorii controlează pe Aloy, o vânătoare în căutarea adevărului într-o lume dominată de mașinării masive.
+                        </figcaption>
+                    </figure>
+                    <div class="preț-joc">
+                        <p>Preț: <s>$59.99</s> <ins>$9.99</ins></p>
+                    </div>
+                </article>
+                <article id="reduceri3">
+                    <h3>Red Dead Redemption 2 (2018)</h3>
+                    <figure>
+                        <picture>
+                            <source srcset="./resurse/images/rdr2cover-lowres.jpg" media="(max-width: 300px)">
+                            <source srcset="./resurse/images/rdr2cover-medres.jpg" media="(max-width: 300px)">
+                            <img src="./resurse/images/rdr2cover-highres.jpg" alt="Red Dead Redemption">
+                        </picture>
+                        <figcaption>
+                            Un western <b>open-world</b> detaliat, în care jucătorii intră în pielea lui Arthur Morgan, un membru al unei bande de nelegiuiți, într-o poveste dramatică despre supraviețuire și loialitate în America anilor 1800.
+                        </figcaption>
+                    </figure>
+                    <div class="preț-joc">
+                        <p>Preț: <s>$59.99</s> <ins>$12.99</ins></p>
+                    </div>
+                </article>
+                <div class="catalog" id="catalog-reduceri">
+                    <p>Descarca catalogul nostru complet de reduceri saptamanale <a href="./resurse/catalog.pdf" download>aici</a></p>
+                </div>
+            </div>
+            <div id="jocurinoi">
+                <h2 id="header-jocurinoi">Jocuri noi</h2>
+                <article id = #noi1>
+                    <h3>Final Fantasy VII Rebirth (2024)</h3>
+                    <figure>
+                        <picture>
+                            <source srcset="./resurse/images/ffxv-lowres.jpg" media="(max-width: 300px)">
+                            <source srcset="./resurse/images/ffxv-medres.jpg" media="(max-width: 300px)">
+                            <img src="./resurse/images/ffxv-highres.jpg" alt="Final Fantasy">
+                        </picture>
+                        <figcaption>
+                            Continuarea remake-ului iconic <b>Final Fantasy VII</b>, oferind o lume extinsă și o <b>poveste captivantă</b>, cu personaje memorabile și lupte intense. Jucătorii explorează mai departe aventurile lui Cloud și prietenii săi într-o lume deschisă și impresionantă vizual.
+                        </figcaption>
+                    </figure>
+                    <div class="preț-joc">
+                        <p>Preț: $59.99</p>
+                    </div>
+                </article>
+                <article id="noi2">
+                    <h3>Black Myth: Wukong (2024)</h3>
+                    <figure>
+                        <picture>
+                            <source srcset="./resurse/images/wukong-lowres.jpg" media="(max-width: 300px)">
+                            <source srcset="./resurse/images/wukong-medres.jpg" media="(max-width: 300px)">
+                            <img src="./resurse/images/wukong-highres.jpg" alt="Wukong">
+                        </picture>
+                        <figcaption>
+                            Inspirat din <strong>mitologia chinezească</strong> și povestea Călătorie spre Vest, <strong>Black Myth: Wukong</strong> este un joc de acțiune și aventură de tip <dfn>soulslike</dfn>, caracterizat prin dificultatea sa ridicată și gameplay-ul provocator. Jucătorii îl controlează pe Regele Maimuță, Wukong, în lupte contra creaturilor mitice și demonilor, într-o lume cu detalii grafice impresionante. Citește mai multe despre sub-genreul soulslike <a href="https://en.wikipedia.org/wiki/Soulslike">aici.</a>
+                        </figcaption>
+                    </figure>
+                    <div class="preț-joc">
+                        <p>Preț: $59.99</p>
+                    </div>
+                </article>
+                <article id="noi3">
+                    <h3>Dragon Ball Sparking! ZERO (2024)</h3>
+                    <figure>
+                        <picture>
+                            <source srcset="./resurse/images/dbsparkling-lowres.jpg" media="(max-width: 300px)">
+                            <source srcset="./resurse/images/dbsparkling-medres.jpg" media="(max-width: 300px)">
+                            <img src="./resurse/images/dbsparkling-highres.jpg" alt="Dragon Ball">
+                        </picture>
+                        <figcaption>
+                            Un joc de luptă intens și dinamic, <b>Dragon Ball Sparking! ZERO</b> continuă tradiția seriei Budokai Tenkaichi, oferind jucătorilor bătălii rapide și spectaculoase într-un mediu 3D. Cu o gamă vastă de personaje din universul Dragon Ball și un gameplay îmbunătățit, jocul promite o experiență autentică și captivantă pentru fanii francizei.
+                        </figcaption>
+                    </figure>
+                    <div class="preț-joc">
+                        <p>Preț: $59.99</p>
+                    </div>
+                </article>
+            </div>
+            <div id="populare">
+                <h2 id="header-populare">Jocuri Populare</h2>
+                <article id="populare1">
+                    <h3>Minecraft</h3>
+                    <figure>
+                        <picture>
+                            <source srcset="./resurse/images/minecraft-lowres.jpg" media="(max-width: 300px)">
+                            <source srcset="./resurse/images/minecraft-medres.jpg" media="(max-width: 300px)">
+                            <img src="./resurse/images/minecraft-highres.jpg" alt="Minecraft">
+                        </picture>
+                        <figcaption>
+                            Un fenomen global, <b>Minecraft</b> permite jucătorilor să construiască și să exploreze lumi generate procedural, fie în modul de <b>supraviețuire</b>, fie în cel creativ. Popularitatea sa continuă să crească datorită actualizărilor constante care adaugă noi biomi, creaturi și funcționalități, făcându-l un joc mereu relevant și captivant pentru toate vârstele.
+                        </figcaption>
+                    </figure>
+                    <div class="preț-joc">
+                        <p>Preț: $59.99</p>
+                    </div>
+                </article>
+                <article id="populare2">
+                    <h3>Doom Eternal (2020)</h3>
+                    <figure>
+                        <picture>
+                            <source srcset="./resurse/images/doom-lowres.jpg" media="(max-width: 300px)">
+                            <source srcset="./resurse/images/doom-medres.jpg" media="(max-width: 300px)">
+                            <img src="./resurse/images/doom-highres.jpg" alt="Doom">
+                        </picture>
+                        <figcaption>
+                            O continuare intensă a seriei <b>Doom</b>, <b>Doom Eternal</b> ridică ștacheta acțiunii, aducând lupte rapide și brutale împotriva demonilor într-un mediu vast și complex. Cu o mobilitate îmbunătățită și o varietate de arme devastatoare, jucătorii trebuie să se confrunte cu hoardele infernului într-o campanie frenetică și vizual impresionantă.
+                        </figcaption>
+                    </figure>
+                    <div class="preț-joc">
+                        <p>Preț: $59.99</p>
+                    </div>
+                </article>
+                <article id="populare3">
+                    <h3>Call of Duty: Modern Warfare II (2022)</h3>
+                    <figure>
+                        <picture>
+                            <source srcset="./resurse/images/codmw2-lowres.jpg" media="(max-width: 300px)">
+                            <source srcset="./resurse/images/codmw2-medres.jpg" media="(max-width: 300px)">
+                            <img src="./resurse/images/codmw2-highres.jpg" alt="COD">
+                        </picture>
+                        <figcaption>
+                            O continuare directă a reboot-ului din 2019, <b>Modern Warfare II</b> oferă o experiență intensă, cu o campanie captivantă și un mod <b>multiplayer</b> extrem de popular. Jocul aduce grafici îmbunătățite, mecanici de luptă rafinate și hărți iconice care mențin comunitatea de jucători activă și competitivă.
+                        </figcaption>
+                    </figure>
+                    <div class="preț-joc">
+                        <p>Preț: $59.99</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+
+        <section class="faq">
+            <h2>Întrebări frecvente (FAQ)</h2>
+            <details>
+                <summary>
+                    Q: Ce tipuri de jocuri pot găsi pe site?
+                </summary>
+                <p>
+                    A: Pe site-ul nostru, oferim o gamă variată de jocuri, inclusiv RPG-uri, acțiune, aventură, simulatoare, jocuri de strategie și multe altele, disponibile pentru diverse platforme.
+                </p>
+            </details>
+            <details>
+                <summary>
+                    Q: Cum pot descărca jocurile după achiziție?
+                </summary>
+                <p>
+                    A: După ce finalizați achiziția, veți primi un email cu un link de descărcare. De asemenea, puteți accesa secțiunea „Contul Meu” de pe site pentru a descărca jocurile achiziționate.
+                </p>
+            </details>
+            <details>
+                <summary>
+                    Q: Există oferte speciale pentru clienți fideli?
+                </summary>
+                <p>
+                    A: Da, clienții fideli beneficiază de reduceri speciale și oferte exclusive. In funcție de cantitatea de jocuri cumparată, scorul dumneavoastră crește dupa formula de mai jos: 
+                </p>
+                <math>
+                    <mrow>
+                        <mi>Scorul de Fidelitate</mi>
+                        <mo>=</mo>
+                        <mrow>
+                            <mi>N</mi>
+                            <mo>×</mo>
+                            <mi>F</mi>
+                            <mo>+</mo>
+                            <mi>B</mi>
+                        </mrow>
+                    </mrow>
+                </math>
+                <p>unde:</p>
+                <ul>
+                    <li><strong>Scorul de Fidelitate</strong>: indică fidelitatea dumneavoastră.</li>
+                    <li><strong>N</strong>: numărul de jocuri cumpărate.</li>
+                    <li><strong>F</strong>: factorul de fidelitate (ex. 10).</li>
+                    <li><strong>B</strong>: suma totală cheltuită.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>
+                    Q: Ce trebuie să fac dacă am probleme cu descărcarea unui joc?
+                </summary>
+                <p>
+                    A: Dacă întâmpinați probleme la descărcare, vă rugăm să verificați conexiunea la internet și să încercați din nou. Dacă problema persistă, contactați echipa noastră de suport pentru asistență.
+                </p>
+            </details>
+            <details>
+                <summary>
+                    Q: Oferiți suport tehnic pentru jocurile cumpărate?
+                </summary>
+                <p>
+                    A: Da, oferim suport tehnic pentru toate jocurile achiziționate de pe site. Dacă aveți întrebări sau întâmpinați probleme, nu ezitați să ne contactați.
+                </p>
+            </details>
+            <details>
+                <summary>
+                    Q: Cum pot obține o rambursare pentru un joc?
+                </summary>
+                <p>
+                    A: Dacă doriți să solicitați o rambursare, vă rugăm să ne contactați în termen de 30 de zile de la achiziție. Asigurați-vă că aveți la îndemână informațiile despre comandă. 
+                </p>
+            </details>
+            <details>
+                <summary>
+                    Q: Care sunt cerințele minime pentru a rula jocurile?
+                </summary>
+                <p>
+                    A: Cerințele minime de sistem variază în funcție de joc. Vă recomandăm să verificați specificațiile fiecărui joc pe pagina sa de produs pentru a vă asigura că PC-ul dumneavoastră îndeplinește cerințele.  
+                </p>
+            </details>
+            <details>
+                <summary>
+                    Q: Pot să cumpăr un joc ca cadou pentru altcineva?
+                </summary>
+                <p>
+                    A: Da, puteți cumpăra jocuri ca dar. În timpul procesului de achiziție, veți avea opțiunea de a introduce adresa de email a destinatarului.
+                </p>
+            </details>
+        </section>
+    </main>
+
+<%- include("../fragmente/footer.ejs") %>
+</body>
+</html>
