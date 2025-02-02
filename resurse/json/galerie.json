@@ -1,0 +1,29 @@
+{
+    "cale_galerie": "/resurse/images",
+    "imagini":[
+        {
+            "file": "codmw2-medres.jpg",
+            "description":"Call of duty"
+        },
+        {
+            "file": "resurse/images/dbsparkling-medres.jpg",
+            "description":"Dragon Ball"
+        },
+        {
+            "file": "resurse/images/doom-medres.jpg",
+            "description":"DooM"
+        },
+        {
+            "file": "resurse/images/ffxv-lowres.jpg",
+            "description":"Final Fantasy"
+        },
+        {
+            "file": "resurse/images/horizoncover-lowres.jpg",
+            "description":"Horizon"
+        },
+        {
+            "file": "resurse/images/minecraft-lowres.jpg",
+            "description":"Minecraft"
+        }
+    ]
+}

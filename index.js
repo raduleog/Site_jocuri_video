@@ -82,6 +82,28 @@ function initErori(){
 
 }
 
+function initImagini(){
+    var continut = fs.readFileSync(path.join(__dirname,"resurse/json/galerie.json").toString("utf-8"));
+
+    obGlobal.obImagini = JSON.parse(continut);
+    let vImagini = obGlobal.obImagini.imagini;
+
+    caleAbs = path.join(__dirname, obGlobal.obImagini.cale_galerie);
+    let caleAbsMediu=path.join(__dirname,obGlobal.obImagini.cale_galerie, "mediu");
+    if (!fs.existsSync(caleAbsMediu))
+        fs.mkdirSync(caleAbsMediu);
+
+    for (let imag of vImagini){
+        [numeFis, ext]=imag.fisier.split(".");
+        let caleFisAbs=path.join(caleAbs,imag.fisier);
+        let caleFisMediuAbs=path.join(caleAbsMediu, numeFis+".webp");
+        sharp(caleFisAbs).resize(300).toFile(caleFisMediuAbs);
+        imag.fisier_mediu=path.join("/", obGlobal.obImagini.cale_galerie, "mediu",numeFis+".webp" )
+        imag.fisier=path.join("/", obGlobal.obImagini.cale_galerie, imag.fisier )
+        
+    }
+}
+
 initErori()
 
 function afisareEroare(res, identificator, titlu, text, imagine){

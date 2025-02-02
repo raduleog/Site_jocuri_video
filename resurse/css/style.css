@@ -328,6 +328,8 @@ iframe {
     display: none;
 }
 
+
+/* print */
 @media print {
 
     #absolut{
@@ -406,4 +408,29 @@ iframe {
     margin-right:3cm;
     margin-left:1cm;
 }
+/* print */
 
+/* hr stilizat */
+.styled-hr {
+    border: none;
+    height: 10px;
+    background: linear-gradient(to right, currentColor, transparent 40%, transparent 60%, currentColor);
+    border-radius: 3px;
+    position: relative;
+    margin: 20px 0;
+    overflow: visible;
+}
+
+.styled-hr::before {
+    content: "*"; 
+    position: absolute;
+    height:50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px !important; 
+    color: var(--text-color);
+    padding: 0 5px;
+    z-index: 1;
+}
+/* hr stilizat */
