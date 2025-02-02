@@ -434,3 +434,21 @@ iframe {
     z-index: 1;
 }
 /* hr stilizat */
+
+/* text reflect */
+#text {
+    position: relative; /* Asigură-te că #text are poziționare relativă */
+}
+
+#reflexie-titlu {
+    transform-origin: 0 0;
+    filter: blur(1px);
+    transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(44px,47px); /* Ajustează valorile translate */
+    opacity: 0.55;
+    transition: transform 0.3s ease;
+}
+
+#reflexie-titlu:hover {
+    transform: rotateX(180deg) skew(-45deg) scaleY(0.8) translate(44px,15px);
+}
+/* text reflect */
